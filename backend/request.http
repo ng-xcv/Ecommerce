@@ -1,0 +1,13 @@
+@API_URL = http://localhost:5000/api
+
+
+//Register a New User
+POST {{API_URL}}/auth/register HTTP/1.1
+
+{
+    "username": "Ngary",
+    "email": "ngary@gmail.com",
+    "password": "12345",
+}
+
+GET {{API_URL}}/user
