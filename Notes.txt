@@ -1,0 +1,2 @@
+npm install --save styled-component
+npm i @material-ui/core @material-ui/icons
