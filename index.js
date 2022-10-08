@@ -41,8 +41,12 @@ mongoose
 
 const httpsServer = https.createServer(
    {
-      cert: fs.readFileSync("/var/www/html/Ecommerce/ssl/server.cert"),
-      key: fs.readFileSync("/var/www/html/Ecommerce/ssl/server.key"),
+      cert: fs.readFileSync(
+         "/etc/letsencrypt/live/ecommerce.faytek.net/privkey.pem"
+      ),
+      key: fs.readFileSync(
+         "/etc/letsencrypt/live/ecommerce.faytek.net/fullchain.pem"
+      ),
    },
    app
 );
