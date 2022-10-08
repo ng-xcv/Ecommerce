@@ -82,7 +82,7 @@ const Footer = () => {
    return (
       <Container>
          <Left>
-            <Logo>NG.</Logo>
+            <Logo>Faytek.</Logo>
             <Description>
                There are many variations of Lorem ipsum avaible, but the
                majority have sufered alteration in some form, by injected

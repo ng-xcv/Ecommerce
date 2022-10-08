@@ -103,7 +103,7 @@ const Login = () => {
       <Container>
          <Wrapper>
             <Logo style={{ color: "black" }}>
-               NG
+               Faytek.
                <ShoppingCart style={{ color: "#c84d62 ", marginLeft: "5px" }} />
             </Logo>
             <Title>SIGN IN</Title>

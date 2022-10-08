@@ -77,7 +77,7 @@ const Register = () => {
       <Container>
          <Wrapper>
             <Logo style={{ color: "black" }}>
-               NG
+               Faytek.
                <ShoppingCart style={{ color: "#e79736 ", marginLeft: "5px" }} />
             </Logo>
             <Title>CREATE AN ACCOUNT</Title>

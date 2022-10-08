@@ -252,7 +252,7 @@ const Cart = () => {
                      <SummaryItemPrice>$ 80</SummaryItemPrice>
                   </SummaryItem>
                   <StripeCheckout
-                     name="NG Shop"
+                     name="Faytek."
                      image="https://lh3.googleusercontent.com/-2CM1pnzJlE0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckDzEMekOLFH38qi_umB63t-t6bQw/photo.jpg?sz=46"
                      billingAddress
                      shippingAddress
