@@ -24,6 +24,14 @@ app.use("/api/orders", orderRoute);
 app.use("/api/products", productRoute);
 app.use("/api/checkout", stripeRoute);
 
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+app.use(express.static(path.join(__dirname, "/admin/build")));
+
+app.get("*", (req, res) => {
+   res.sendFile(path.join(__dirname, "/frontend/build", "index.html"));
+   res.sendFile(path.join(__dirname, "/admin/build", "index.html"));
+});
+
 mongoose
    .connect(process.env.URI, { useNewUrlParser: true })
    .then(() => console.log("\nDatabase connected successfully !"))
@@ -31,8 +39,8 @@ mongoose
 
 const httpsServer = https.createServer(
    {
-      cert: fs.readFileSync("/ssl/server.crt"),
-      key: fs.readFileSync("/ssl/server.key"),
+      cert: fs.readFileSync("ssl/server.crt"),
+      key: fs.readFileSync("ssl/server.key"),
    },
    app
 );
