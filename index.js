@@ -39,8 +39,8 @@ mongoose
 
 const httpsServer = https.createServer(
    {
-      cert: fs.readFileSync("ssl/server.crt"),
-      key: fs.readFileSync("ssl/server.key"),
+      cert: fs.readFileSync("/var/www/html/Ecommerce/ssl/server.crt"),
+      key: fs.readFileSync("/var/www/html/Ecommerce/ssl/server.key"),
    },
    app
 );
