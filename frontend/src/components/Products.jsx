@@ -23,6 +23,7 @@ const Products = ({ cat, filters, sort }) => {
                   ? `https://44.210.140.91:6000/api/products?category=${cat}`
                   : "https://44.210.140.91:6000/api/products"
             );
+            console.log(res.data);
             setProducts(res.data);
          } catch (err) {}
       };
