@@ -6,16 +6,6 @@ const cors = require("cors");
 const https = require("https");
 const fs = require("fs");
 
-const directoryToServe = "frontend";
-const port = 3443;
-
-app.use("/", express.static(path.join(__dirname, "..", directoryToServe)));
-
-const httpsOptions = {
-   cert: fs.readFileSync(path.join(__dirname, "ssl", "server.crt")),
-   key: fs.readFileSync(path.join(__dirname, "ssl", "server.key")),
-};
-
 //Importing routes
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
@@ -39,14 +29,14 @@ mongoose
    .then(() => console.log("\nDatabase connected successfully !"))
    .catch((err) => console.log(err));
 
-https
-   .createServer(
-      {
-         key: fs.readFileSync("server.key"),
-         cert: fs.readFileSync("server.cert"),
-      },
-      app
-   )
-   .listen(process.env.PORT, function () {
-      console.log(`\nBackend server is running on ${process.env.PORT} :)`);
-   });
+const httpsServer = https.createServer(
+   {
+      cert: fs.readFileSync("ssl/server.crt"),
+      key: fs.readFileSync("ssl/server.key"),
+   },
+   app
+);
+
+httpsServer.listen(process.env.PORT, function () {
+   console.log(`\nBackend server is running on ${process.env.PORT} :)`);
+});
