@@ -20,8 +20,8 @@ const Products = ({ cat, filters, sort }) => {
          try {
             const res = await axios.get(
                cat
-                  ? `https://44.210.140.91:6000/api/products?category=${cat}`
-                  : "https://44.210.140.91:6000/api/products"
+                  ? `https://44.210.140.91:5000/api/products?category=${cat}`
+                  : "https://44.210.140.91:5000/api/products"
             );
             console.log(res.data);
             setProducts(res.data);
