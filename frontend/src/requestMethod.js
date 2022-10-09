@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://44.210.140.91:5000/api";
+const BASE_URL = "https://ecommerce-api.faytek.net/api";
 const TOKEN = ""; //JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user)
 //.currentUser.accessToken;
 
