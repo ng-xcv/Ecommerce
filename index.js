@@ -39,22 +39,22 @@ mongoose
    .then(() => console.log("\nDatabase connected successfully !"))
    .catch((err) => console.log(err));
 
-const httpsServer = https.createServer(
-   {
-      key: fs.readFileSync(
-         "/etc/letsencrypt/live/ecommerce.faytek.net/privkey.pem"
-      ),
-      cert: fs.readFileSync(
-         "/etc/letsencrypt/live/ecommerce.faytek.net/fullchain.pem"
-      ),
-   },
-   app
-);
+// const httpsServer = https.createServer(
+//    {
+//       key: fs.readFileSync(
+//          "/etc/letsencrypt/live/ecommerce.faytek.net/privkey.pem"
+//       ),
+//       cert: fs.readFileSync(
+//          "/etc/letsencrypt/live/ecommerce.faytek.net/fullchain.pem"
+//       ),
+//    },
+//    app
+// );
 
-httpsServer.listen(process.env.PORT, function () {
-   console.log(`\nBackend server is running on ${process.env.PORT} :)`);
-});
-
-// app.listen(process.env.PORT, () => {
+// httpsServer.listen(process.env.PORT, function () {
 //    console.log(`\nBackend server is running on ${process.env.PORT} :)`);
 // });
+
+app.listen(process.env.PORT, () => {
+   console.log(`\nBackend server is running on ${process.env.PORT} :)`);
+});
