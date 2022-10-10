@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const BASE_URL = "https://ecommerce-api.faytek.net/api";
-const currentUser = JSON.parse(
-   JSON.parse(localStorage.getItem("persist:root")).user
-).currentUser;
+
+const VAL = JSON.parse(localStorage.getItem("persist:root"))?.user;
+
+const currentUser = VAL !== undefined ? JSON.parse(VAL)?.currentUser : null;
 
 const TOKEN = currentUser ? currentUser.accessToken : null;
 
