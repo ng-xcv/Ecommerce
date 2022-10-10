@@ -3,8 +3,8 @@ import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts, deleteProduct } from "../../redux/apiCalls";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../../redux/apiCalls";
 import { userRequest } from "../../requestMethod";
 
 export default function Orders() {
